@@ -1,7 +1,6 @@
 services:
   - type: web
-    name: cctv-stream-viewer
+    name: flask-opencv-stream
     env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: gunicorn app:app
